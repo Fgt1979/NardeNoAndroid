@@ -6479,285 +6479,386 @@
 .end method
 
 .method public switchLevel()V
+    .locals 6
+
+    .prologue
+    const/16 v5, 0x10
+
+    const/16 v4, 0xd
+
+    const/16 v3, 0xa
+
+    const/4 v2, 0x5
+
+    const/4 v1, 0x1
+
+    .line 472
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    if-ge v0, v1, :cond_1
+
+    .line 474
+    iput v1, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 475
+    iput v1, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    .line 545
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 477
+    :cond_1
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    if-lt v0, v1, :cond_2
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    if-ge v0, v2, :cond_2
+
+    .line 478
+    const/4 v0, 0x2
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 479
+    iput v2, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto :goto_0
+
+    .line 481
+    :cond_2
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    if-lt v0, v2, :cond_3
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    if-ge v0, v3, :cond_3
+
+    .line 482
+    const/4 v0, 0x3
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 483
+    iput v3, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto :goto_0
+
+    .line 485
+    :cond_3
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    if-lt v0, v3, :cond_4
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    if-ge v0, v4, :cond_4
+
+    .line 486
+    const/4 v0, 0x4
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 487
+    iput v4, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto :goto_0
+
+    .line 489
+    :cond_4
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    if-lt v0, v4, :cond_5
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    if-ge v0, v5, :cond_5
+
+    .line 490
+    iput v2, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 491
+    iput v5, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto :goto_0
+
+    .line 493
+    :cond_5
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    if-lt v0, v5, :cond_6
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x12
+
+    if-ge v0, v1, :cond_6
+
+    .line 494
+    const/4 v0, 0x6
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 495
+    const/16 v0, 0x12
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto :goto_0
+
+    .line 497
+    :cond_6
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x12
+
+    if-lt v0, v1, :cond_7
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x16
+
+    if-ge v0, v1, :cond_7
+
+    .line 498
+    const/4 v0, 0x7
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 499
+    const/16 v0, 0x16
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto :goto_0
+
+    .line 502
+    :cond_7
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x16
+
+    if-lt v0, v1, :cond_8
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x1a
+
+    if-ge v0, v1, :cond_8
+
+    .line 503
+    const/16 v0, 0x8
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 504
+    const/16 v0, 0x1a
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto :goto_0
+
+    .line 507
+    :cond_8
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x1a
+
+    if-lt v0, v1, :cond_9
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x1e
+
+    if-ge v0, v1, :cond_9
+
+    .line 508
+    const/16 v0, 0x9
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 509
+    const/16 v0, 0x1e
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto/16 :goto_0
+
+    .line 514
+    :cond_9
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x1e
+
+    if-lt v0, v1, :cond_a
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x20
+
+    if-ge v0, v1, :cond_a
+
+    .line 515
+    iput v3, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 516
+    const/16 v0, 0x20
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto/16 :goto_0
+
+    .line 518
+    :cond_a
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x20
+
+    if-lt v0, v1, :cond_b
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x24
+
+    if-ge v0, v1, :cond_b
+
+    .line 519
+    const/16 v0, 0xb
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 520
+    const/16 v0, 0x24
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto/16 :goto_0
+
+    .line 522
+    :cond_b
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x24
+
+    if-lt v0, v1, :cond_c
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x28
+
+    if-ge v0, v1, :cond_c
+
+    .line 523
+    const/16 v0, 0xc
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 524
+    const/16 v0, 0x28
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto/16 :goto_0
+
+    .line 526
+    :cond_c
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x28
+
+    if-lt v0, v1, :cond_d
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x2a
+
+    if-ge v0, v1, :cond_d
+
+    .line 527
+    const/16 v0, 0xd
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 528
+    const/16 v0, 0x2a
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto/16 :goto_0
+
+    .line 531
+    :cond_d
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x2a
+
+    if-lt v0, v1, :cond_e
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x2e
+
+    if-ge v0, v1, :cond_e
+
+    .line 532
+    const/16 v0, 0xe
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 533
+    const/16 v0, 0x2e
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto/16 :goto_0
+
+    .line 536
+    :cond_e
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x2e
+
+    if-lt v0, v1, :cond_0
+
+    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+
+    const/16 v1, 0x32
+
+    if-ge v0, v1, :cond_0
+
+    .line 537
+    const/16 v0, 0xf
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+
+    .line 538
+    const/16 v0, 0x32
+
+    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+
+    goto/16 :goto_0
+.end method
+
+.method public touchScreen()V
     .locals 2
 
     .prologue
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
+    .line 754
+    iget-object v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->stageGame:Lcom/badlogic/gdx/scenes/scene2d/Stage;
 
-    const/4 v1, 0x2
-    if-ge v0, v1, :cond_1
+    new-instance v1, Lsk/mladyumelec/narde/Podkidnoj$2;
 
-    const/4 v0, 0x1
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
+    invoke-direct {v1, p0}, Lsk/mladyumelec/narde/Podkidnoj$2;-><init>(Lsk/mladyumelec/narde/Podkidnoj;)V
 
-    const/4 v0, 0x4
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
+    invoke-virtual {v0, v1}, Lcom/badlogic/gdx/scenes/scene2d/Stage;->addListener(Lcom/badlogic/gdx/scenes/scene2d/EventListener;)Z
 
-    goto :goto_0
-
-    :cond_1
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/4 v1, 0x2
-    if-lt v0, v1, :cond_2
-
-    const/4 v1, 0x4
-    if-ge v0, v1, :cond_2
-
-    const/4 v0, 0x2
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/4 v0, 0x6
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_2
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/4 v1, 0x4
-    if-lt v0, v1, :cond_3
-
-    const/4 v1, 0x6
-    if-ge v0, v1, :cond_3
-
-    const/4 v0, 0x3
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/4 v0, 0x8
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_3
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/4 v1, 0x6
-    if-lt v0, v1, :cond_4
-
-    const/4 v1, 0x8
-    if-ge v0, v1, :cond_4
-
-    const/4 v0, 0x4
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/4 v0, 0xa
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_4
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/4 v1, 0x8
-    if-lt v0, v1, :cond_5
-
-    const/4 v1, 0xa
-    if-ge v0, v1, :cond_5
-
-    const/4 v0, 0x5
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/4 v0, 0xc
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_5
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/4 v1, 0xa
-    if-lt v0, v1, :cond_6
-
-    const/4 v1, 0xc
-    if-ge v0, v1, :cond_6
-
-    const/4 v0, 0x6
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/4 v0, 0xe
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_6
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/4 v1, 0xc
-    if-lt v0, v1, :cond_7
-
-    const/4 v1, 0xe
-    if-ge v0, v1, :cond_7
-
-    const/4 v0, 0x7
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/16 v0, 0x10
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_7
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/4 v1, 0xe
-    if-lt v0, v1, :cond_8
-
-    const/16 v1, 0x10
-    if-ge v0, v1, :cond_8
-
-    const/4 v0, 0x8
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/16 v0, 0x12
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_8
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/16 v1, 0x10
-    if-lt v0, v1, :cond_9
-
-    const/16 v1, 0x12
-    if-ge v0, v1, :cond_9
-
-    const/4 v0, 0x9
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/16 v0, 0x14
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_9
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/16 v1, 0x12
-    if-lt v0, v1, :cond_10
-
-    const/16 v1, 0x14
-    if-ge v0, v1, :cond_10
-
-    const/4 v0, 0xa
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/16 v0, 0x16
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_10
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/16 v1, 0x14
-    if-lt v0, v1, :cond_11
-
-    const/16 v1, 0x16
-    if-ge v0, v1, :cond_11
-
-    const/4 v0, 0xb
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/16 v0, 0x18
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_11
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/16 v1, 0x16
-    if-lt v0, v1, :cond_12
-
-    const/16 v1, 0x18
-    if-ge v0, v1, :cond_12
-
-    const/4 v0, 0xc
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/16 v0, 0x1a
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_12
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/16 v1, 0x18
-    if-lt v0, v1, :cond_13
-
-    const/16 v1, 0x1a
-    if-ge v0, v1, :cond_13
-
-    const/4 v0, 0xd
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/16 v0, 0x1c
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_13
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/16 v1, 0x1a
-    if-lt v0, v1, :cond_14
-
-    const/16 v1, 0x1c
-    if-ge v0, v1, :cond_14
-
-    const/4 v0, 0xe
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/16 v0, 0x1e
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_14
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/16 v1, 0x1c
-    if-lt v0, v1, :cond_end
-
-    const/4 v0, 0xf
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/16 v0, 0x1e
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    goto :goto_0
-
-    :cond_end
-
-    iget v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->pobed:I
-
-    const/4 v0, 0x1
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->currentLevel:I
-
-    const/4 v0, 0x2
-    iput v0, p0, Lsk/mladyumelec/narde/Podkidnoj;->nextLevel:I
-
-    :goto_0
+    .line 935
     return-void
 .end method
-
 
 .method public vibiraemPervujuKartuSopernik()V
     .locals 6
